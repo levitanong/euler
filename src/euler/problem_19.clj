@@ -1,9 +1,6 @@
 (ns euler.problem-19
-  (:gen-class))
-
-(defn divisible?
-  [x divisor]
-  (= (mod x divisor) 0))
+  (:gen-class)
+  (:use [lib.math-util]))
 
 (defn leap-year?
   [year]

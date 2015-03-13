@@ -1,15 +1,7 @@
 (ns euler.problem-21
   (:gen-class)
-  (:require [clojure.math.numeric-tower :as math]))
-
-(defn divisible?
-  [x divisor]
-  (= (mod x divisor) 0))
-
-(defn d
-  "The sum of divisors of n less than n. Inefficient but elegant"
-  [n]
-  (apply + (filter (partial divisible? n) (range 1 n))))
+  (:require [clojure.math.numeric-tower :as math])
+  (:use [lib.math-util lib.proper-divisors]))
 
 (defn amicable?
   [n m]
